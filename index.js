@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { Queue, Worker } = require('bullmq');
 const Redis = require('ioredis');
-const uri = 'mongodb+srv://harshdunkhwal55:hbCkEDLtWHpEFNiB@cluster0.al3derw.mongodb.net/Gurucool?retryWrites=true&w=majority&appName=Cluster0';
+require('dotenv').config();
+const uri = process.env.DB_URI;
 
 const app = express();
 
